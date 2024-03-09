@@ -1,19 +1,18 @@
-README
-License
-Ex.No: 1B CONVERSION OF NON STATIONARY TO STATIONARY DATA
+
+## Ex.No: 1B CONVERSION OF NON STATIONARY TO STATIONARY DATA
 Date: 09/03/2024
 Name: Meena S
 Register Number: 212221240028
-AIM:
+## AIM:
 To perform regular differncing,seasonal adjustment and log transformatio on international airline passenger data
 
-ALGORITHM:
+## ALGORITHM:
 Import the required packages like pandas and numpy
 Read the data using the pandas
 Perform the data preprocessing if needed and apply regular differncing,seasonal adjustment,log transformation.
 Plot the data according to need, before and after regular differncing,seasonal adjustment,log transformation.
 Display the overall results.
-PROGRAM:
+## PROGRAM:
 Import the necessary Packages
 import pandas as pd
 import numpy as np
@@ -26,7 +25,7 @@ y=data['International airline passengers: monthly totals in thousands. Jan 49 ? 
 plt.xlabel('Month')
 plt.ylabel('International airline passengers: monthly totals in thousands.')
 plt.plot(x,y)
-REGULAR DIFFERENCING
+## REGULAR DIFFERENCING
 data3=data
 data3['diff']=data3['International airline passengers: monthly totals in thousands. Jan 49 ? Dec 60'].diff(periods=1)
 data3=data3.dropna()
@@ -35,7 +34,7 @@ y=data3['diff']
 plt.xlabel('Month')
 plt.ylabel('International airline passengers: monthly totals in thousands.')
 plt.plot(x,y)
-SEASONAL ADJUSTMENT
+## SEASONAL ADJUSTMENT
 data1=data
 data1['SeasonalAdjustment'] = data1['International airline passengers: monthly totals in thousands. Jan 49 ? Dec 60'] - data1['International airline passengers: monthly totals in thousands. Jan 49 ? Dec 60'].shift(12)
 data1['SeasonalAdjustment'].dropna()
@@ -52,20 +51,20 @@ x=data2['Month']
 y=data2['log']
 plt.xlabel('Month')
 plt.ylabel('International airline passengers: monthly totals in thousands.')
-# plt.figure(figsize=(8, 6)) 
+### plt.figure(figsize=(8, 6)) 
 plt.plot(x,y)
-OUTPUT:
-WITHOUT CONVERSION:
+### OUTPUT:
+### WITHOUT CONVERSION:
 t1
 
-REGULAR DIFFERENCING:
+### REGULAR DIFFERENCING:
 t2
 
-SEASONAL ADJUSTMENT:
+### SEASONAL ADJUSTMENT:
 t3
 
-LOG TRANSFORMATION:
+### LOG TRANSFORMATION:
 t4
 
-RESULT:
+## RESULT:
 Thus we have created the python code for the conversion of non stationary to stationary data on international airline passenger data.
